@@ -37,11 +37,12 @@ dependencies:
   cupertino_icons: ^1.0.2
   device_info_plus: ^9.1.2
   http: ^1.1.0
-  shared_preferences: ^2.2.3
+
   url_launcher: ^6.2.4
   get: ^4.6.6
   lottie: ^2.7.0
   animated_text_kit: ^4.2.2
+  get_storage: ^2.1.1
 
 
 dev_dependencies:
