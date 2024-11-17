@@ -14,8 +14,12 @@ jobs:
         with:
           channel: 'stable'
           architecture: x64
+
+      - run: flutter clean  # پاک‌سازی کش Flutter
       - run: flutter pub get
       
+      - run: pod cache clean --all  # پاک‌سازی کش CocoaPods
+        working-directory: ios
 
       - run: pod repo update
         working-directory: ios
