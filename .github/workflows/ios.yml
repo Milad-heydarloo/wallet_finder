@@ -11,7 +11,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          ref: main
+          ref: main  # اگر از شاخه دیگری استفاده می‌کنید، این را تغییر دهید
 
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
@@ -22,16 +22,12 @@ jobs:
       - name: Install dependencies
         run: flutter pub get
 
-      - name: Update CocoaPods repo
-        run: pod repo update
-        working-directory: ios
-
       - name: Install CocoaPods
         run: pod install
         working-directory: ios
 
       - name: Build iOS app
-        run: flutter build ios --release --no-codesign
+        run: flutter build ios --release --no-codesign  # در صورت نیاز به کد امضا، باید اطلاعات آن را وارد کنید
 
       - name: Create Payload directory
         run: mkdir Payload
