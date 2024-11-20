@@ -442,6 +442,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'فعال‌سازی',
+      theme: ThemeData(
+        fontFamily: 'dm',
+      ),
       debugShowCheckedModeBanner: false,
       initialRoute: AppRoutes.terms,
       getPages: AppRoutes.getPages,
