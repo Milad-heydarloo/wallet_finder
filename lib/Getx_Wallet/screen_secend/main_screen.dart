@@ -24,7 +24,6 @@ class MainScreen extends StatelessWidget {
             final data = snapshot.data!;
             return Center(
               child: Column(
-
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
@@ -32,9 +31,8 @@ class MainScreen extends StatelessWidget {
                   Text(
                       'قوانین رو پذیرفته: ${data['termsAccepted'] ? "بله" : "خیر"}'),
                   Text('آدرس تلفن همراه: ${data['deviceId'] ?? "نامشخص"}'),
-                  Text(
-                      'آدرس ثبت‌نام اختصاصی تلگرام: '),   Text(
-                      '${data['botUrl'] ?? "نامشخص"} '),
+                  Text('آدرس ثبت‌نام اختصاصی تلگرام: '),
+                  Text('${data['botUrl'] ?? "نامشخص"} '),
                   Text(
                       'لایسنس دار؟: ${data['isLicenseValid'] ? "بله" : "خیر"}'),
                   Text('تا کی داره؟: ${data['expiration_time'] ?? "نامشخص"}'),

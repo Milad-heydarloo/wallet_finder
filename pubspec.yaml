@@ -12,7 +12,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # In Android, build-name is used as versionName while build-number used as versionCode.
 # Read more about Android versioning at https://developer.android.com/studio/publish/versioning
 # In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
-# Read more about iOS versioning at
+# Read more about iOS versioning aPt
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # In Windows, build-name is used as the major, minor, and patch parts
 # of the product and file versions while build-number is used as the build suffix.
@@ -34,15 +34,17 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
-  device_info_plus: ^9.1.2
-  http: ^1.1.0
 
+  device_information: ^0.0.4
+  cupertino_icons: ^1.0.2
+  http: ^1.1.0
   url_launcher: ^6.2.4
   get: ^4.6.6
-  lottie: ^2.7.0
   animated_text_kit: ^4.2.2
-  get_storage: ^2.1.1
+  lottie: ^2.7.0
+  sqflite: ^2.0.0+4
+#  get_storage: ^2.1.1
+  path: ^1.8.0
 
 
 dev_dependencies:
