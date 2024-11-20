@@ -443,7 +443,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'فعال‌سازی',
       theme: ThemeData(
-        fontFamily: 'dm',
+        fontFamily: 'vazir',
       ),
       debugShowCheckedModeBanner: false,
       initialRoute: AppRoutes.terms,
