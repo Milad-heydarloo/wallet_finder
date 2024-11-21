@@ -29,8 +29,8 @@ environment:
 # versions available, run `flutter pub outdated`.
 
 
-dev_dependencies:
-  flutter_test:
+dependencies:
+  flutter:
     sdk: flutter
 
   flutter_launcher_icons: ^0.13.1
@@ -46,7 +46,9 @@ dev_dependencies:
   #  get_storage: ^2.1.1
   path: ^1.8.0
 
-
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
 
 flutter_icons:
   android: "launcher_icon"
