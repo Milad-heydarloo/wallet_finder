@@ -11,12 +11,12 @@ class RegisterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Directionality(textDirection: TextDirection.rtl, child: Scaffold(
       backgroundColor: Colors.blue[50], // پس‌زمینه روشن
-      appBar: AppBar(
-        backgroundColor: Colors.transparent, // حذف پس‌زمینه ناچ بار
-        elevation: 0, // حذف سایه
-        centerTitle: true,
-        automaticallyImplyLeading: false, // حذف دکمه Back
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: Colors.transparent, // حذف پس‌زمینه ناچ بار
+      //   elevation: 0, // حذف سایه
+      //   centerTitle: true,
+      //   automaticallyImplyLeading: false, // حذف دکمه Back
+      // ),
       body: Stack(
         children: [
           // انیمیشن

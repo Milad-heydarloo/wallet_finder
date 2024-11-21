@@ -86,11 +86,11 @@ class _TermsPageState extends State<TermsPage> {
         textDirection: TextDirection.rtl,
         child: Scaffold(
           backgroundColor: Colors.blue[50], // تنظیم رنگ پس‌زمینه
-          appBar: AppBar(
-            backgroundColor: Colors.blue[50], // رنگ ناچ بار
-            elevation: 0, // حذف سایه ناچ بار
-            automaticallyImplyLeading: false, // حذف دکمه Back
-          ),
+          // appBar: AppBar(
+          //   backgroundColor: Colors.blue[50], // رنگ ناچ بار
+          //   elevation: 0, // حذف سایه ناچ بار
+          //   automaticallyImplyLeading: false, // حذف دکمه Back
+          // ),
           body: Stack(
             children: [
               // لایه اسکرول‌شونده

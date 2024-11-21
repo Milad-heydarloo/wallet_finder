@@ -7,12 +7,12 @@ class MainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.transparent, // حذف پس‌زمینه ناچ بار
-        elevation: 0, // حذف سایه
-        centerTitle: true,
-        automaticallyImplyLeading: false, // حذف دکمه Back
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: Colors.transparent, // حذف پس‌زمینه ناچ بار
+      //   elevation: 0, // حذف سایه
+      //   centerTitle: true,
+      //   automaticallyImplyLeading: false, // حذف دکمه Back
+      // ),
       body: FutureBuilder<Map<String, dynamic>>(
         future: _loadData(),
         builder: (context, snapshot) {

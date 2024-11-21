@@ -12,10 +12,10 @@ class LicensePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blue[50], // تنظیم رنگ پس‌زمینه
-      appBar: AppBar(
-        backgroundColor: Colors.blue[50], // رنگ ناچ بار
-        elevation: 0, // حذف سایه ناچ بار
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: Colors.blue[50], // رنگ ناچ بار
+      //   elevation: 0, // حذف سایه ناچ بار
+      // ),
       body: SingleChildScrollView( // اضافه کردن ScrollView برای جلوگیری از overflow
         padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 20.0),
         child: Column(
