@@ -113,7 +113,7 @@ import 'package:wallet_finder/view_front_farbod/database/DatabaseHelper_Transact
 
 class BalanceController extends GetxController {
   final ApiService _apiService = ApiService();
-  final DatabaseHelper _dbService = DatabaseHelper();
+  final DatabaseHelper_Wallet _dbService = DatabaseHelper_Wallet();
 
   RxList<BalanceRecord> balanceList = <BalanceRecord>[].obs;
   RxList<MapEntry<String, String>> balances = <MapEntry<String, String>>[].obs;

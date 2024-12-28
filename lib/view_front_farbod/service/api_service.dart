@@ -1,36 +1,49 @@
+import 'dart:convert';
+
 import 'package:dio/dio.dart';
 import 'package:wallet_finder/view_front_farbod/model/model_balance_record.dart';
 import 'package:wallet_finder/view_front_farbod/model/model_api_records.dart';
 
+import '../../cleancode_one/cleannewedameh.dart';
+
 
 class ApiService {
-  // Singleton Instance
-  // static final ApiService _instance = ApiService._internal();
-  //
-  // Dio instance
-  //late final Dio _dio;
 
   static final Dio dio = Dio();
-  //
-  // // Private constructor
-  // ApiService._internal() {
-  //   dio = Dio(
-  //     BaseOptions(
-  //       baseUrl: '',
-  //       connectTimeout: Duration(seconds: 5),
-  //       receiveTimeout: Duration(seconds: 10),
-  //       headers: {'Content-Type': 'application/json'},
-  //     ),
-  //   );
-  // }
-  //
-  // // Factory constructor
-  // factory ApiService() {
-  //   return _instance;
-  // }
+
 
   static const String _baseUrlFetchWalletRecords = 'http://49.13.74.101:4000/assign';
   static const String _baseUrlFetchAPIRecords = 'http://49.13.74.101:5000/assign';
+  Future<List<MachineEntity>> fetchWalletRecordswallet() async {
+    try {
+      final response = await dio.post(
+        _baseUrlFetchWalletRecords,
+        data: jsonEncode({'user_id': 'user123'}), // تبدیل به JSON
+        options: Options(
+          headers: {'Content-Type': 'application/json'}, // ارسال به عنوان JSON
+        ),
+      );
+
+      if (response.statusCode == 200) {
+        final List<dynamic> data = response.data['assigned_records'];
+        print('Number of records fetched: ${data.length}');
+        print('${data.toList()}');
+
+        // تبدیل داده‌ها به لیست MachineEntity
+        return data.map((record) {
+          return MachineEntity.fromJson(
+              record); // تبدیل هر رکورد به MachineEntity
+        }).toList();
+      } else {
+        print('Error: ${response.statusCode}');
+        print('Response data: ${response.data}');
+        throw Exception('Failed to load data: ${response.statusCode}');
+      }
+    } catch (e) {
+      print('Error: $e');
+      throw Exception('Error fetching data: $e');
+    }
+  }
 
   Future<List<BalanceRecord>> fetchWalletRecords() async {
     try {
@@ -42,6 +55,8 @@ class ApiService {
       if (response.statusCode == 200) {
         final List<dynamic> data = response.data['assigned_records'];
         print('Number of records fetched: ${data.length}');
+        print('${data.toList()}');
+        print(response.data['assigned_records']);
         return data.map((record) => BalanceRecord.fromJson(record)).toList();
 
 

@@ -315,36 +315,36 @@ Future<double> getBtcBalance(String address) async {
 
 void main() async {
 
-  String address = "0x5bd441E835f7433BEd0d224dC7e77C1d7db3479e";
-  String apiKey = "R6DM7H7H8KV8PFJ4H4131JG2KDE2Q5B582";
-
-  double balance = await getEthBalance(address, apiKey);
-  print("ETH Balance: $balance ETH");
-
-
-  String address_bnb = "0x4F4b64706174Ec0E05485a8Cb325A1Bb2345816c";
-  String apiKey_bscscan = "H82GYHNCD9K57BH1HK8KACXYQTIZQYIGHS";
-
-  double balancee = await getBnbBalance(address_bnb, apiKey_bscscan);
-  print("BNB Balance: $balancee BNB");
-
-  String address_tron = "TFAG3BjKVDqs3C4fnciputw7UBkYMavFKc";  // آدرس TRX شما
-
-  double balance_tron = await getTrxBalance(address_tron);
-  print("TRX Balance: $balance_tron TRX");
-
-
-  String address_bscscan = "0x4F4b64706174Ec0E05485a8Cb325A1Bb2345816c";  // آدرس BNB شما
-  String apiKey_bscscan_ = "N1HG69CMFSYKRZVMA6V8Y1DR5J4URQ68SA";  // کلید API BscScan شما
-
-  double bnbBalance = await getBnbBalance(address_bscscan, apiKey_bscscan_);
-  double usdtBalance = await getUsdtBalance(address_bscscan, apiKey_bscscan_);
-  double busdBalance = await getBusdBalance(address_bscscan, apiKey_bscscan_);
-
-  print("BNB Balance: $bnbBalance BNB");
-  print("USDT Balance: $usdtBalance USDT");
-  print("BUSD Balance: $busdBalance BUSD");
-
+  // String address = "0x5bd441E835f7433BEd0d224dC7e77C1d7db3479e";
+  // String apiKey = "R6DM7H7H8KV8PFJ4H4131JG2KDE2Q5B582";
+  //
+  // double balance = await getEthBalance(address, apiKey);
+  // print("ETH Balance: $balance ETH");
+  //
+  //
+  // String address_bnb = "0x4F4b64706174Ec0E05485a8Cb325A1Bb2345816c";
+  // String apiKey_bscscan = "H82GYHNCD9K57BH1HK8KACXYQTIZQYIGHS";
+  //
+  // double balancee = await getBnbBalance(address_bnb, apiKey_bscscan);
+  // print("BNB Balance: $balancee BNB");
+  //
+  // String address_tron = "TFAG3BjKVDqs3C4fnciputw7UBkYMavFKc";  // آدرس TRX شما
+  //
+  // double balance_tron = await getTrxBalance(address_tron);
+  // print("TRX Balance: $balance_tron TRX");
+  //
+  //
+  // String address_bscscan = "0x4F4b64706174Ec0E05485a8Cb325A1Bb2345816c";  // آدرس BNB شما
+  // String apiKey_bscscan_ = "N1HG69CMFSYKRZVMA6V8Y1DR5J4URQ68SA";  // کلید API BscScan شما
+  //
+  // double bnbBalance = await getBnbBalance(address_bscscan, apiKey_bscscan_);
+  // double usdtBalance = await getUsdtBalance(address_bscscan, apiKey_bscscan_);
+  // double busdBalance = await getBusdBalance(address_bscscan, apiKey_bscscan_);
+  //
+  // print("BNB Balance: $bnbBalance BNB");
+  // print("USDT Balance: $usdtBalance USDT");
+  // print("BUSD Balance: $busdBalance BUSD");
+  //
 
 
   //etrum kar mikoneh
@@ -354,14 +354,14 @@ void main() async {
   // double balanceee = await getMaticBalance(address_matic, apiKey_polygonscan);
   // print("MATIC Balance: $balanceee MATIC");
 
-  // //
-  // String addressO = "TFAG3BjKVDqs3C4fnciputw7UBkYMavFKc";  // آدرس اول بیت‌کوین
-  // String addressN = "TFAG3BjKVDqs3C4fnciputw7UBkYMavFKc";  // آدرس دوم بیت‌کوین
   //
-  // // دریافت موجودی برای هر آدرس
-  // double btcBalanceO = await getBtcBalance(addressO);
-  // double btcBalanceN = await getBtcBalance(addressN);
-  //
-  // print("BTC Balance (Address O): $btcBalanceO BTC");
-  // print("BTC Balance (Address N): $btcBalanceN BTC");
+  String addressO = "TFAG3BjKVDqs3C4fnciputw7UBkYMavFKc";  // آدرس اول بیت‌کوین
+  String addressN = "TFAG3BjKVDqs3C4fnciputw7UBkYMavFKc";  // آدرس دوم بیت‌کوین
+
+  // دریافت موجودی برای هر آدرس
+  double btcBalanceO = await getBtcBalance(addressO);
+  double btcBalanceN = await getBtcBalance(addressN);
+
+  print("BTC Balance (Address O): $btcBalanceO BTC");
+  print("BTC Balance (Address N): $btcBalanceN BTC");
 }

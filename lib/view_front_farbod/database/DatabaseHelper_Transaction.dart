@@ -4,13 +4,13 @@ import 'package:path/path.dart';
 import 'package:wallet_finder/view_front_farbod/model/model_balance_record.dart';
 
 
-class DatabaseHelper {
-  static final DatabaseHelper _instance = DatabaseHelper._internal();
+class DatabaseHelper_Wallet {
+  static final DatabaseHelper_Wallet _instance = DatabaseHelper_Wallet._internal();
   static Database? _database;
 
-  DatabaseHelper._internal();
+  DatabaseHelper_Wallet._internal();
 
-  factory DatabaseHelper() => _instance;
+  factory DatabaseHelper_Wallet() => _instance;
 
   Future<Database> get database async {
     if (_database != null) return _database!;
